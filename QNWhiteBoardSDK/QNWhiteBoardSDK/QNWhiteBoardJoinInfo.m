@@ -18,7 +18,11 @@
 
 -(instancetype)initWithParam:(NSString *)appId_ room:(NSString *)roomId_ user:(NSString *)userId_ token:(NSString *)token_ {
     self.joinInfo = [self.joinInfo initWithParam:appId_ room:roomId_  user:userId_ token:token_];
-    return [self initWithParam:self.joinInfo.appId room:self.joinInfo.roomId  user:self.joinInfo.userId token:self.joinInfo.token];
+    self.appId = appId_;
+    self.roomId = roomId_;
+    self.userId = userId_;
+    self.token = token_;    
+    return self;
 }
 
 -(NSDictionary *)toDictionary {

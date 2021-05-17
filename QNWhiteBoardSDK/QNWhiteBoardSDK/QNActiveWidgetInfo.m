@@ -17,7 +17,7 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict_{
     self.activeWidgetInfo = [self.activeWidgetInfo initWithDictionary:dict_];
-    return [self initWithDictionary:dict_];    
+    return self;    
 }
 
 - (WBActiveWidgetInfo *)activeWidgetInfo {

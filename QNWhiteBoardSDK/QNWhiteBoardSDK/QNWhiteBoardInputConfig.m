@@ -38,32 +38,32 @@
 
 +(instancetype)instanceWithPen:(NSString *)color_ thickness:(float)thickness_ {
     [WBInputConfig instanceWithPen:color_ thickness:thickness_];
-    return [QNWhiteBoardInputConfig instanceWithPen:color_ thickness:thickness_];
+    return [QNWhiteBoardInputConfig new];
 }
 
 +(instancetype)instanceWithMark:(NSString *)color_ thickness:(float)thickness_ {
     [WBInputConfig instanceWithMark:color_ thickness:thickness_];
-    return [QNWhiteBoardInputConfig instanceWithMark:color_ thickness:thickness_];
+    return [QNWhiteBoardInputConfig new];
 }
 
 +(instancetype)instanceWithLaser:(WBPenStyle)laserType_ {
     [WBInputConfig instanceWithLaser:laserType_];
-    return [QNWhiteBoardInputConfig instanceWithLaser:@(laserType_)];
+    return [QNWhiteBoardInputConfig new];
 }
 
 +(instancetype)instanceWithErase:(float)size_ {
     [WBInputConfig instanceWithErase:size_];
-    return [QNWhiteBoardInputConfig instanceWithErase:size_];
+    return [QNWhiteBoardInputConfig new];
 }
 
 +(instancetype)instanceWithSelect {
     [WBInputConfig instanceWithSelect];
-    return [QNWhiteBoardInputConfig instanceWithSelect];
+    return [QNWhiteBoardInputConfig new];
 }
 
 +(instancetype)instanceWithGeometry:(WBGeometryType)geometryType_ color:(NSString *)color_ thickness:(float)thickNess_ {
     [WBInputConfig instanceWithGeometry:geometryType_ color:color_ thickness:thickNess_];
-    return [QNWhiteBoardInputConfig instanceWithGeometry:@(geometryType_) color:color_ thickness:thickNess_];
+    return [QNWhiteBoardInputConfig new];
 }
 
 - (WBInputConfig *)inputConfig {

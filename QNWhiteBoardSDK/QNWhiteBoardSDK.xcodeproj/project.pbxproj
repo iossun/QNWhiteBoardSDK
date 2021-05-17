@@ -52,8 +52,10 @@
 		77B11BBF264E5611007A3892 /* QNWhiteboardDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 77B11BBE264E5611007A3892 /* QNWhiteboardDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		77B11BC4264E5672007A3892 /* QNWhiteboardUIDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 77B11BC3264E5672007A3892 /* QNWhiteboardUIDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		77B11BE7264E6082007A3892 /* QNWhiteBoardDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 77B11BB1264E53A5007A3892 /* QNWhiteBoardDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		77B11C05264E6C46007A3892 /* whiteboard_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B11C04264E6C46007A3892 /* whiteboard_sdk.framework */; platformFilter = ios; };
-		77B11C0A264E6C66007A3892 /* chatboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B11C09264E6C66007A3892 /* chatboard.framework */; platformFilter = ios; };
+		77B11C05264E6C46007A3892 /* whiteboard_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B11C04264E6C46007A3892 /* whiteboard_sdk.framework */; platformFilter = ios; settings = {ATTRIBUTES = (Weak, ); }; };
+		77B11C0A264E6C66007A3892 /* chatboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B11C09264E6C66007A3892 /* chatboard.framework */; platformFilter = ios; settings = {ATTRIBUTES = (Weak, ); }; };
+		77B11C0E264E7025007A3892 /* whiteboard_sdk.framework in Sources */ = {isa = PBXBuildFile; fileRef = 77B11C04264E6C46007A3892 /* whiteboard_sdk.framework */; platformFilter = ios; };
+		77B11C0F264E7029007A3892 /* chatboard.framework in Sources */ = {isa = PBXBuildFile; fileRef = 77B11C09264E6C66007A3892 /* chatboard.framework */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -402,6 +404,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77B11C0F264E7029007A3892 /* chatboard.framework in Sources */,
+				77B11C0E264E7025007A3892 /* whiteboard_sdk.framework in Sources */,
 				77B11B57264E2A83007A3892 /* QNWhiteBoardRoomMember.m in Sources */,
 				77B11BA0264E36CD007A3892 /* QNWhiteBoardRoom.m in Sources */,
 				77B11B51264E292A007A3892 /* QNWhiteBoardJoinInfo.m in Sources */,
@@ -581,6 +585,10 @@
 				LIBRARY_SEARCH_PATHS = "";
 				MACH_O_TYPE = staticlib;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qiniu.QNWhiteBoardSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -615,6 +623,10 @@
 				LIBRARY_SEARCH_PATHS = "";
 				MACH_O_TYPE = staticlib;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qiniu.QNWhiteBoardSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

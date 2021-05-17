@@ -30,7 +30,7 @@
 
 -(instancetype)initWithParams:(NSInteger)chatId_ room:(NSString *)roomId_ fileGroup:(NSString *)fileGroupId_{
     self.room = [self.room initWithParams:chatId_ room:roomId_ fileGroup:fileGroupId_];
-    return [self initWithParams:chatId_ room:roomId_ fileGroup:fileGroupId_];
+    return self;
 }
 
 - (WBRoom *)room {

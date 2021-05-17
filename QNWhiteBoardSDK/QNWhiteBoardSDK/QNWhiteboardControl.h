@@ -13,11 +13,11 @@
 #import <QNWhiteBoardSDK/QNWhiteBoardFileInfo.h>
 #import <QNWhiteBoardSDK/QNWhiteBoardPageInfo.h>
 #import <QNWhiteBoardSDK/QNActiveWidgetInfo.h>
-#import "QNWhiteboardDelegate.h"
-#import "QNWhiteboardUIDelegate.h"
-#import "QNWBScreenShotsDelegate.h"
+#import <QNWhiteBoardSDK/QNWhiteboardDelegate.h>
+#import <QNWhiteBoardSDK/QNWhiteboardUIDelegate.h>
+#import <QNWhiteBoardSDK/QNWBScreenShotsDelegate.h>
 #import <QNWhiteBoardSDK/QNWhiteboardConfig.h>
-#import "QNWhiteBoardDefine.h"
+#import <QNWhiteBoardSDK/QNWhiteBoardDefine.h>
 #import <QNWhiteBoardSDK/QNWhiteBoardRoomMember.h>
 #import <UIKit/UIKit.h>
 #import <QNWhiteBoardSDK/QNWhiteBoardInfo.h>
@@ -30,12 +30,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *当前加入的房间信息
  */
-@property (nonatomic,readonly,retain) QNWhiteBoardRoom * room;
+@property (nonatomic,copy) QNWhiteBoardRoom * room;
 
 /**
  *当前用户的个人信息
  */
-@property (nonatomic,retain,readonly) QNWhiteBoardRoomMember * me;
+@property (nonatomic,copy) QNWhiteBoardRoomMember * me;
 
 @property (nonatomic,readonly) QNWhiteboardConfig * config;
 /**
@@ -94,7 +94,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param roomInfo_ 携带的房间和身份信息
  * @param me_ 携带个人信息
  */
--(void)joinRoom:(QNWhiteBoardJoinInfo *)roomInfo_ member:(QNWhiteBoardRoomMember *)me_;
+-(void)joinRoom:(QNWhiteBoardJoinInfo *)roomInfo member:(QNWhiteBoardRoomMember *)me token:(NSString *)token;
 /**
  * 离开白板房间
  *

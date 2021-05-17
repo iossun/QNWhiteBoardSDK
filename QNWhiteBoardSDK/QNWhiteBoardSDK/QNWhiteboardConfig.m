@@ -18,7 +18,7 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict_{
     self.whiteboardConfig = [self.whiteboardConfig initWithDictionary:dict_];
-    return [self initWithDictionary:dict_];
+    return self;
 }
 
 - (WhiteboardConfig *)whiteboardConfig {

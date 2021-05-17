@@ -13,10 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 /**
 * 应用id
 */
-@property (nonatomic,retain,readonly) NSString * appId;
-@property (nonatomic,retain,readonly) NSString * roomId;
-@property (nonatomic,retain,readonly) NSString * userId;
-@property (nonatomic,retain,readonly) NSString * token;
+@property (nonatomic, copy) NSString * appId;
+@property (nonatomic, copy) NSString * roomId;
+@property (nonatomic, copy) NSString * userId;
+@property (nonatomic, copy) NSString * token;
 
 -(instancetype)initWithParam:(NSString *)appId_ room:(NSString *)roomId_ user:(NSString *)userId_ token:(NSString *)token_;
 

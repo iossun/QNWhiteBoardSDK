@@ -50,7 +50,7 @@
 
 -(instancetype)initWithDictionary:(NSDictionary *)params_{
     self.boardInfo = [self.boardInfo initWithDictionary:params_];
-    return [self initWithDictionary:params_];
+    return self;
 }
 
 - (WBBoardInfo *)boardInfo {

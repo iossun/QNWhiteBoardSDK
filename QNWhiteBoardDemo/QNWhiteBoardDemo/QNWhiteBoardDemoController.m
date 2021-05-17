@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     [self joinRoom];
     
 }
@@ -30,8 +30,8 @@
 -(void)joinRoom
 {
     QNWhiteBoardJoinInfo * joinInfo = [[QNWhiteBoardJoinInfo alloc] initWithParam:appId room:roomId user:userId  token:token];
-    QNWhiteBoardRoomMember * member = [[QNWhiteBoardRoomMember alloc] initWithParams:userId session:NULL role:6 name:NULL avatar:NULL];
-    [[QNWhiteboardControl instance] joinRoom:joinInfo member:member];
+    QNWhiteBoardRoomMember * member = [[QNWhiteBoardRoomMember alloc] initWithParams:userId session:@"" role:6 name:@"" avatar:@""];
+    [[QNWhiteboardControl instance] joinRoom:joinInfo member:member token:token];
 }
                      
                      

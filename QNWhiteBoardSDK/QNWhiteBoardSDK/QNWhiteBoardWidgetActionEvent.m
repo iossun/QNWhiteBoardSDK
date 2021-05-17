@@ -34,7 +34,7 @@
 
 -(instancetype)initWithDictionary:(NSDictionary *)params_{
     self.widgetActionEvent = [self.widgetActionEvent initWithDictionary:params_];
-    return [self initWithDictionary:params_];
+    return self;
 }
 
 - (WBWidgetActionEvent *)widgetActionEvent {

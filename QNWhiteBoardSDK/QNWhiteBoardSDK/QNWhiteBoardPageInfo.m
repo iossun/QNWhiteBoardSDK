@@ -39,7 +39,7 @@
 
 -(instancetype)initFromDictonary:(NSDictionary *)params_ {
     self.pageInfo = [self.pageInfo initFromDictonary:params_];
-    return [self initFromDictonary:params_];
+    return self;
 }
 
 -(NSString *)getThumbnailUrl {

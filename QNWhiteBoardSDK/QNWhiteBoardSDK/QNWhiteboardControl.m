@@ -12,6 +12,8 @@
 
 @property (nonatomic,strong)  WhiteboardControl *whiteboardControl;
 
+
+
 @end
 
 @implementation QNWhiteboardControl
@@ -22,7 +24,7 @@
 
 - (WhiteboardControl *)whiteboardControl {
     if (!_whiteboardControl) {
-        _whiteboardControl = [WhiteboardControl new];
+        _whiteboardControl = [WhiteboardControl instance];
     }
     return _whiteboardControl;
 }
@@ -168,6 +170,7 @@
 }
 
 - (instancetype)init {
+    self.whiteboardControl = [self.whiteboardControl init];
     return self;
 }
 
@@ -191,12 +194,35 @@
     [self.whiteboardControl insertImageFromAlbum:rect_];
 }
 
+static QNWhiteboardControl * control = nil;
+
 + (instancetype)instance {
-    return [QNWhiteboardControl instance];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        control = [[QNWhiteboardControl alloc] init];
+    });
+    return control;
 }
 
-- (void)joinRoom:(WBJoinInfo *)roomInfo_ member:(WBRoomMember *)me_ {
-    [self.whiteboardControl joinRoom:roomInfo_ member:me_];
+- (void)joinRoom:(QNWhiteBoardJoinInfo *)roomInfo member:(QNWhiteBoardRoomMember *)me token:(NSString *)token {
+    
+//    NSString *authURL = @"https://rtc.qiniuapi.com";
+//    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/v3/apps/%@/rooms/%@/auth?user=%@&token=%@", authURL, roomInfo_.appId, roomInfo_.roomId, roomInfo_.userId, @""]];
+//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+//    request.HTTPMethod = @"GET";
+//    request.timeoutInterval = 8;
+//    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//
+//        NSLog(@"-----------------%@",response);
+//    }];
+//    [task resume];
+    NSObject *ggg = [NSObject new];
+    
+    
+    WBJoinInfo *joinInfo = [[WBJoinInfo alloc] initWithParam:roomInfo.appId room:roomInfo.roomId user:roomInfo.userId token:token];
+    WBRoomMember *member = [[WBRoomMember alloc]initWithParams:roomInfo.userId session:@"" role:6 name:@"" avatar:@""];
+    [self.whiteboardControl joinRoom:joinInfo member:member];
+    
 }
 
 - (void)jumpBoardPage:(NSString *)pageId_ {

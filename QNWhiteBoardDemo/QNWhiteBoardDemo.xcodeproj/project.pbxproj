@@ -17,7 +17,9 @@
 		77B11AF8264E1D9B007A3892 /* QNWhiteBoardDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B11AF7264E1D9B007A3892 /* QNWhiteBoardDemoTests.m */; };
 		77B11B03264E1D9B007A3892 /* QNWhiteBoardDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B11B02264E1D9B007A3892 /* QNWhiteBoardDemoUITests.m */; };
 		77B11B4A264E289C007A3892 /* QNWhiteBoardDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B11B48264E289C007A3892 /* QNWhiteBoardDemoController.m */; };
-		77B11C00264E6AFA007A3892 /* QNWhiteBoardSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B11B7C264E34B6007A3892 /* QNWhiteBoardSDK.framework */; };
+		77B11C00264E6AFA007A3892 /* QNWhiteBoardSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B11B7C264E34B6007A3892 /* QNWhiteBoardSDK.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		77B11C1A264E745D007A3892 /* whiteboard_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B11C19264E745D007A3892 /* whiteboard_sdk.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		77B11C1C264E7470007A3892 /* chatboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B11C1B264E7470007A3892 /* chatboard.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,18 @@
 			remoteInfo = QNWhiteBoardDemo;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		77B11C20264E74F7007A3892 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		77B11AD8264E1D98007A3892 /* QNWhiteBoardDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QNWhiteBoardDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +73,8 @@
 		77B11B48264E289C007A3892 /* QNWhiteBoardDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNWhiteBoardDemoController.m; sourceTree = "<group>"; };
 		77B11B49264E289C007A3892 /* QNWhiteBoardDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNWhiteBoardDemoController.h; sourceTree = "<group>"; };
 		77B11B7C264E34B6007A3892 /* QNWhiteBoardSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QNWhiteBoardSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77B11C19264E745D007A3892 /* whiteboard_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = whiteboard_sdk.framework; sourceTree = "<group>"; };
+		77B11C1B264E7470007A3892 /* chatboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = chatboard.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +82,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77B11C1A264E745D007A3892 /* whiteboard_sdk.framework in Frameworks */,
 				77B11C00264E6AFA007A3892 /* QNWhiteBoardSDK.framework in Frameworks */,
+				77B11C1C264E7470007A3892 /* chatboard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +108,8 @@
 		77B11ACF264E1D98007A3892 = {
 			isa = PBXGroup;
 			children = (
+				77B11C1B264E7470007A3892 /* chatboard.framework */,
+				77B11C19264E745D007A3892 /* whiteboard_sdk.framework */,
 				77B11ADA264E1D98007A3892 /* QNWhiteBoardDemo */,
 				77B11AF6264E1D9B007A3892 /* QNWhiteBoardDemoTests */,
 				77B11B01264E1D9B007A3892 /* QNWhiteBoardDemoUITests */,
@@ -164,6 +184,7 @@
 				77B11AD4264E1D98007A3892 /* Sources */,
 				77B11AD5264E1D98007A3892 /* Frameworks */,
 				77B11AD6264E1D98007A3892 /* Resources */,
+				77B11C20264E74F7007A3892 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -473,6 +494,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "";
+				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qiniu.QNWhiteBoardDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -499,6 +521,7 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = "";
+				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = "-Objc";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qiniu.QNWhiteBoardDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
