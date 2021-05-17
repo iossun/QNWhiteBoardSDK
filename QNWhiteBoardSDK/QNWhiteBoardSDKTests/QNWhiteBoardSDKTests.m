@@ -2,7 +2,7 @@
 //  QNWhiteBoardSDKTests.m
 //  QNWhiteBoardSDKTests
 //
-//  Created by 郭茜 on 2021/5/14.
+//  Created by 孙慕 on 2021/5/17.
 //
 
 #import <XCTest/XCTest.h>

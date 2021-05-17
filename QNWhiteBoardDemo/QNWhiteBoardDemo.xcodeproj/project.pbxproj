@@ -17,9 +17,8 @@
 		77B11AF8264E1D9B007A3892 /* QNWhiteBoardDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B11AF7264E1D9B007A3892 /* QNWhiteBoardDemoTests.m */; };
 		77B11B03264E1D9B007A3892 /* QNWhiteBoardDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B11B02264E1D9B007A3892 /* QNWhiteBoardDemoUITests.m */; };
 		77B11B4A264E289C007A3892 /* QNWhiteBoardDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B11B48264E289C007A3892 /* QNWhiteBoardDemoController.m */; };
-		77B11C00264E6AFA007A3892 /* QNWhiteBoardSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B11B7C264E34B6007A3892 /* QNWhiteBoardSDK.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		77B11C1A264E745D007A3892 /* whiteboard_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B11C19264E745D007A3892 /* whiteboard_sdk.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		77B11C1C264E7470007A3892 /* chatboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B11C1B264E7470007A3892 /* chatboard.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E3ED9D9526526FD10021A537 /* QNWhiteBoardSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3ED9D9226526F6B0021A537 /* QNWhiteBoardSDK.framework */; };
+		E3ED9DB8265274F10021A537 /* QNWhiteBoardSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E3ED9D9226526F6B0021A537 /* QNWhiteBoardSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,15 +36,30 @@
 			remoteGlobalIDString = 77B11AD7264E1D98007A3892;
 			remoteInfo = QNWhiteBoardDemo;
 		};
+		E3ED9D9126526F6B0021A537 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3ED9D8C26526F6B0021A537 /* QNWhiteBoardSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E3ED9CAB26526DC70021A537;
+			remoteInfo = QNWhiteBoardSDK;
+		};
+		E3ED9D9326526F6B0021A537 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3ED9D8C26526F6B0021A537 /* QNWhiteBoardSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E3ED9CB426526DC80021A537;
+			remoteInfo = QNWhiteBoardSDKTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		77B11C20264E74F7007A3892 /* CopyFiles */ = {
+		E3ED9DB7265274E70021A537 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E3ED9DB8265274F10021A537 /* QNWhiteBoardSDK.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,9 +86,8 @@
 		77B11B04264E1D9B007A3892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77B11B48264E289C007A3892 /* QNWhiteBoardDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QNWhiteBoardDemoController.m; sourceTree = "<group>"; };
 		77B11B49264E289C007A3892 /* QNWhiteBoardDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QNWhiteBoardDemoController.h; sourceTree = "<group>"; };
-		77B11B7C264E34B6007A3892 /* QNWhiteBoardSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QNWhiteBoardSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		77B11C19264E745D007A3892 /* whiteboard_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = whiteboard_sdk.framework; sourceTree = "<group>"; };
-		77B11C1B264E7470007A3892 /* chatboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = chatboard.framework; sourceTree = "<group>"; };
+		E3ED9C702652680E0021A537 /* QNWhiteBoardSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QNWhiteBoardSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3ED9D8C26526F6B0021A537 /* QNWhiteBoardSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QNWhiteBoardSDK.xcodeproj; path = ../QNWhiteBoardSDK/QNWhiteBoardSDK.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77B11C1A264E745D007A3892 /* whiteboard_sdk.framework in Frameworks */,
-				77B11C00264E6AFA007A3892 /* QNWhiteBoardSDK.framework in Frameworks */,
-				77B11C1C264E7470007A3892 /* chatboard.framework in Frameworks */,
+				E3ED9D9526526FD10021A537 /* QNWhiteBoardSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,8 +119,7 @@
 		77B11ACF264E1D98007A3892 = {
 			isa = PBXGroup;
 			children = (
-				77B11C1B264E7470007A3892 /* chatboard.framework */,
-				77B11C19264E745D007A3892 /* whiteboard_sdk.framework */,
+				E3ED9D8C26526F6B0021A537 /* QNWhiteBoardSDK.xcodeproj */,
 				77B11ADA264E1D98007A3892 /* QNWhiteBoardDemo */,
 				77B11AF6264E1D9B007A3892 /* QNWhiteBoardDemoTests */,
 				77B11B01264E1D9B007A3892 /* QNWhiteBoardDemoUITests */,
@@ -169,9 +179,18 @@
 		77B11B7B264E34B6007A3892 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				77B11B7C264E34B6007A3892 /* QNWhiteBoardSDK.framework */,
+				E3ED9C702652680E0021A537 /* QNWhiteBoardSDK.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3ED9D8D26526F6B0021A537 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E3ED9D9226526F6B0021A537 /* QNWhiteBoardSDK.framework */,
+				E3ED9D9426526F6B0021A537 /* QNWhiteBoardSDKTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,7 +203,7 @@
 				77B11AD4264E1D98007A3892 /* Sources */,
 				77B11AD5264E1D98007A3892 /* Frameworks */,
 				77B11AD6264E1D98007A3892 /* Resources */,
-				77B11C20264E74F7007A3892 /* CopyFiles */,
+				E3ED9DB7265274E70021A537 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -263,6 +282,12 @@
 			mainGroup = 77B11ACF264E1D98007A3892;
 			productRefGroup = 77B11AD9264E1D98007A3892 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E3ED9D8D26526F6B0021A537 /* Products */;
+					ProjectRef = E3ED9D8C26526F6B0021A537 /* QNWhiteBoardSDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				77B11AD7264E1D98007A3892 /* QNWhiteBoardDemo */,
@@ -271,6 +296,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E3ED9D9226526F6B0021A537 /* QNWhiteBoardSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = QNWhiteBoardSDK.framework;
+			remoteRef = E3ED9D9126526F6B0021A537 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E3ED9D9426526F6B0021A537 /* QNWhiteBoardSDKTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QNWhiteBoardSDKTests.xctest;
+			remoteRef = E3ED9D9326526F6B0021A537 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		77B11AD6264E1D98007A3892 /* Resources */ = {
@@ -489,6 +531,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = QNWhiteBoardDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -516,6 +559,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = QNWhiteBoardDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
